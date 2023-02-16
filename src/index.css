@@ -1,13 +1,71 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+p {
+  font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media (min-width: 768px) {
+  .sign_up {
+    margin-top: 90px;
+    margin-left: 263px;
+    height: 460px;
+    width: 424px;
+  }
+
+  .logo {
+    width: 176px;
+    height: 40px;
+  }
+
+  .let_get {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 100px;
+  }
+
+  .top-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+  }
+  
+  .down-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+  }
+
+  .footer-1 {
+    height: 70px;
+    margin-top: 85px;
+  }
+
+  .top-ring {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .below-1 {
+    display: none;
+  }
+
+  .footer-1 {
+    margin-top: 130px;
+  }
+
+  .down-ring {
+    display: none;
+  }
 }
