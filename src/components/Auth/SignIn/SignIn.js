@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
-import geniopay from '../../assets/geniopay.png';
+import { Link } from 'react-router-dom';
+import geniopay from '../../../assets/geniopay.png';
 import { RiErrorWarningLine } from 'react-icons/ri'
-import cards from '../../assets/cards.png';
-import link from '../../assets/link.png';
-import carbon from '../../assets/carbon.png';
-import transfer from '../../assets/data-transfer.png';
-import world from '../../assets/world.png';
-import wallet from '../../assets/wallet.png';
-import clipboard from '../../assets/clipboard.png';
-import close from '../../assets/close.png';
-import signin from '../../assets/signin.png';
-import facebookButton from '../../assets/facebook-button.png';
-import linkedinButton from '../../assets/linkedin-button.png';
-import googleButton from '../../assets/google-button.png';
+import cards from '../../../assets/cards.png';
+import link from '../../../assets/link.png';
+import carbon from '../../../assets/carbon.png';
+import transfer from '../../../assets/data-transfer.png';
+import world from '../../../assets/world.png';
+import wallet from '../../../assets/wallet.png';
+import clipboard from '../../../assets/clipboard.png';
+import close from '../../../assets/close.png';
+import signin from '../../../assets/signin.png';
+import facebookButton from '../../../assets/facebook-button.png';
+import linkedinButton from '../../../assets/linkedin-button.png';
+import googleButton from '../../../assets/google-button.png';
 
-const SignUp = () => {
+const SignIn = () => {
     const [ nav, setNav ] = useState(false);
 
     const handleNav = () => {
@@ -25,44 +26,43 @@ const SignUp = () => {
     <div>
         <div className='flex flex-row justify-between'>
          <div>
-            <div className='m-[24px] sign_up'>
+            <div className='m-[24px] sign_in'>
             <div className='flex justify-between items-center mb-[40px]'>
                 <img src={geniopay} alt='logo' className='logo'/>
                 <div className='text-[#008AA7] top-ring'><RiErrorWarningLine size={20} onClick={handleNav}/></div>
             </div>
-            <div className='text-[#0188A5] text-[30px] tracking-tighter mb-[24px] let_get'><p>Lets's get started</p></div>
+            <div className='text-[#0188A5] text-[30px] tracking-tighter mb-[20px] let_get md:text-[20px]'><p>Sign In</p></div>
+            <div className='my-2 md:my-1 md:text-[10px]'><p>Access the GenioPay panel using your email and password</p></div>
                 <form>
-                    <div>
+                    <div className='flex flex-col gap-[10px]'>
+                     <div className='flex flex-col'>
                       <input
                        type="text"
                        name="email"
-                       placeholder="Email Address"
-                      className='border text-[#2c2c2e] w-[327px] h-[56px] rounded-[8px] p-[24px]'
+                       placeholder="Email address"
+                       className='border border-[#0188a5] text-[#2c2c2e] w-[327px] h-[56px] rounded-[8px] p-[24px] md:w-[424px]'
+                       />
+                       <div className='text-[#0188a5] text-end mt-1'><p>Need Help?</p></div>
+                      </div>
+                     <div className='flex flex-col'>
+                     <input
+                       type="text"
+                       name="email"
+                       placeholder="Passcode"
+                      className='border border-[#0188a5] text-[#2c2c2e] w-[327px] h-[56px] rounded-[8px] p-[24px] md:w-[424px]'
                      />
+                     <div className='text-[#0188a5] text-end mt-1'><p>Forgot Password?</p></div>
+                     </div>
                     </div>
-                    <div className='flex flex-row gap-2 my-3'>
-                      <input type="checkbox" className='text-[#0188A5]'/>
-                    <p className='text-[11px]'>I agree to GenioPay's <span className='text-[#008aa7] underline'>Terms of Use</span> and <span className='text-[#008aa7] underline'>Privacy Policy</span></p>
-                    </div>
-                    <div className='flex flex-row gap-2 my-3'>
-                      <input type="checkbox"/>
-                    <p className='text-[11px]'>I agree to Master Card <span className='text-[#008aa7] underline'>Term's and Conditions</span></p>
-                    </div>
-                    <div className='flex my-3 gap-2'>
-                      <input type="checkbox" className='relative flex items-start'/>
-                    <p className='text-[11px] col-span-9'>I would like to receive marketing communications from GenioPay 
-                      related to special offers, promotions and marketing via any of my provided information in line with the <span className='text-[#008aa7] underline'>Privacy Policy</span></p>
-                    </div>
-
-                     <button type="submit" className='h-[40px] w-[327px] bg-[#E0F7FE] rounded-lg mt-[38px]'>SIGN UP</button>
+                    <button type="submit" className='h-[40px] w-[327px] bg-[#E0F7FE] rounded-lg mt-[20px] md:w-[424px]'>LOG IN</button>
                 </form>
-                <div className='text-[10px] tracking-tighter mt-3'><p>Already have an account? <span className='text-[#0188A5]'>Login instead</span></p></div>
+                <div className='flex flex-row text-[10px] tracking-tighter mt-3'><p>Dont have an account?</p><Link to='/signUpEmail'><span className='text-[#0188A5]'>Sign up instaed</span></Link></div>
                 <div className="flex flex-col justify-center items-center mt-3">
                     <div className='mt-3'><img  src={signin} alt="signin"/></div>
                     <div className='flex gap-2 mt-3'>
-                        <div><img src={googleButton} alt="google-button"/></div>
-                        <div><img src={linkedinButton} alt="linkedin-button"/></div>
-                        <div><img src={facebookButton} alt="facebook-button"/></div>
+                        <div><button className='hover:scale-110 cursor-pointer'><img src={googleButton} alt="google-button"/></button></div>
+                        <div><button className='hover:scale-110 cursor-pointer'><img src={linkedinButton} alt="linkedin-button"/></button></div>
+                        <div><button className='hover:scale-110 cursor-pointer'><img src={facebookButton} alt="facebook-button"/></button></div>
                     </div>
                 </div>
              </div>
@@ -96,4 +96,4 @@ const SignUp = () => {
   )
 }
 
-export default SignUp
+export default SignIn
