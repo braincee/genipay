@@ -10,6 +10,20 @@ p {
 
 @media (min-width: 768px) {
   .sign_up {
+    margin-top: 20px;
+    margin-left: 263px;
+    height: 530px;
+    width: 424px;
+  }
+
+  .sign_in {
+    margin-top: 90px;
+    margin-left: 263px;
+    height: 460px;
+    width: 424px;
+  }
+  
+  .sign_up_email_verification {
     margin-top: 90px;
     margin-left: 263px;
     height: 460px;
@@ -54,6 +68,24 @@ p {
   .top-ring {
     display: none;
   }
+
+  .sign_up_nationality {
+    margin-top: 90px;
+    margin-left: 263px;
+    height: 460px;
+    width: 424px;
+  }
+
+  .sign_up_phone {
+    margin-top: 90px;
+    margin-left: 263px;
+    height: 460px;
+    width: 424px;
+  }
+
+  .sign_up_nationality input{
+    width: 422px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -67,5 +99,25 @@ p {
 
   .down-ring {
     display: none;
+  }
+
+  .sign_up_email_verification {
+    height: 520px;
+    margin-top: 50px;
+  }
+
+  .sign_up_nationality {
+    height: 520px;
+    margin-top: 50px;
+  }
+
+  .sign_up_phone {
+    height: 520px;
+    margin-top: 50px;
+  }
+
+  .sign_in {
+    height: 520px;
+    margin-top: 50px;
   }
 }
